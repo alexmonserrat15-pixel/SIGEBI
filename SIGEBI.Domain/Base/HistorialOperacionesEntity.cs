@@ -1,0 +1,5 @@
+﻿
+namespace SIGEBI.Domain.Base
+{
+    
+}

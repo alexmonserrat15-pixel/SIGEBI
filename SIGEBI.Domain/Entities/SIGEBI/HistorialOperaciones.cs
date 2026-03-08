@@ -6,5 +6,7 @@ namespace SIGEBI.Domain.Entities.SIGEBI
 {
     internal class HistorialOperaciones
     {
+
+
     }
 }
