@@ -1,5 +1,0 @@
-﻿
-namespace SIGEBI.Domain.Base
-{
-    
-}
