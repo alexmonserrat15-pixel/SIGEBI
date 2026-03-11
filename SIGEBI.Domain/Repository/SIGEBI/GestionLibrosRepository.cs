@@ -1,9 +1,10 @@
 ﻿using SIGEBI.Domain.Entities;
 using SIGEBI.Domain.Entities.SIGEBI;
+using SIGEBI.Domain.Repository.SIGEBI.Base;
 
 namespace SIGEBI.Domain.Interfaces.Repositories
 {
-    public interface IGestionLibroRepository
+    public interface IGestionLibroRepository : IBaseRepository<GestionLibros>
     {
         Task<IEnumerable<GestionLibros>> GetAllAsync();
 
