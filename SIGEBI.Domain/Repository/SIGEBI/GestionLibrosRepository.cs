@@ -1,10 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using SIGEBI.Domain.Entities;
+using SIGEBI.Domain.Entities.SIGEBI;
 
-namespace SIGEBI.Domain.Repository.SIGEBI
+namespace SIGEBI.Domain.Interfaces.Repositories
 {
-    internal interface GestionLibrosRepository
+    public interface IGestionLibroRepository
     {
+        Task<IEnumerable<GestionLibros>> GetAllAsync();
+
+        Task<GestionLibros?> GetByIdAsync(int id);
+
+        Task<IEnumerable<GestionLibros>> GetDisponiblesAsync();
+
+        Task AddAsync(GestionLibros libro);
+
+        Task UpdateAsync(GestionLibros libro);
+
+        Task DeleteAsync(int id);
+
+        Task<bool> ExistsAsync(int id);
     }
 }

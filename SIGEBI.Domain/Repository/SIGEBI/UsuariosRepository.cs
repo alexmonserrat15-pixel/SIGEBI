@@ -1,10 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using SIGEBI.Domain.Base;
+using SIGEBI.Domain.Entities;
 
-namespace SIGEBI.Domain.Repository.SIGEBI
+namespace SIGEBI.Domain.Interfaces.Repositories
 {
-    internal interface UsuariosRepository
+    public interface IUsuarioRepository
     {
+        Task<IEnumerable<Usuarios>> GetAllAsync();
+
+        Task<Usuarios?> GetByIdAsync(int id);
+
+        Task<Usuarios?> GetByEmailAsync(string email);
+
+        Task AddAsync(Usuarios usuario);
+
+        Task UpdateAsync(Usuarios usuario);
+
+        Task DeleteAsync(int id);
+
+        Task<bool> ExistsAsync(int id);
     }
 }

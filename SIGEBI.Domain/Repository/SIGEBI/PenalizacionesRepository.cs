@@ -1,10 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
+using SIGEBI.Domain.Entities.SIGEBI;
 
 namespace SIGEBI.Domain.Repository.SIGEBI
 {
-    internal class PenalizacionesRepository
+    public interface IPenalizacionesRepository
     {
+        Task<IEnumerable<Penalizaciones>> GetAllAsync();
+
+        Task<IEnumerable<Penalizaciones>> GetByUsuarioIdAsync(int usuarioId);
+
+        Task<Penalizaciones?> GetByIdAsync(int id);
+
+        Task AddAsync(Penalizaciones penalizacion);
+
+        Task UpdateAsync(Penalizaciones penalizacion);
     }
 }
