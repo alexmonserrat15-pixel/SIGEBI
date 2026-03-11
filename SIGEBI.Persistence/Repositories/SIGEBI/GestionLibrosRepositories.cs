@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SIGEBI.Persistence.Repositories.SIGEBI
 {
-    internal class GestionLibrosRepository
+    internal class GestionLibrosRepositories
     {
     }
 }
