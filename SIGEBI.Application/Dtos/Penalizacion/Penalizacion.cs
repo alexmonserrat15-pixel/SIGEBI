@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SIGEBI.Application.Dtos
+namespace SIGEBI.Application.Dtos.Penalizacion
 {
-    public class CreatePenalizaciondto
+    public class Penalizaciondto
     {
         public int IdUsuario { get; set; }
 

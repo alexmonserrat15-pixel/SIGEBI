@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SIGEBI.Application.Dtos
+namespace SIGEBI.Application.Dtos.Usuario
 {
-    public class CreateUsuariodto
+    public class Usuariodto
     {
         public string Nombre { get; set; } = string.Empty;
 

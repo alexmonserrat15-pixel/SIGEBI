@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SIGEBI.Application.Dtos
+namespace SIGEBI.Application.Dtos.Prestamo
 {
-    public class CreatePrestamodto
+    public class Prestamodto
     {
         public int IdUsuario { get; set; }
 
