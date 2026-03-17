@@ -4,8 +4,8 @@ using System.Text;
 
 namespace SIGEBI.Application.Dtos.Penalizacion
 {
-   public class CreatePenalizaciondto : Penalizaciondto
+    public class UpdateUsuariodto : Penalizaciondto
     {
-       
+
     }
 }
