@@ -4,18 +4,14 @@ using System.Text;
 
 namespace SIGEBI.Application.Dtos.GestionLibros
 {
-      public class CreateGestionLibrodto : GestionLibroDto
+    public class UpdateGestionLibroDto
     {
+        public int IdLibro { get; set; }
+
         public string Titulo { get; set; } = string.Empty;
 
         public string Autor { get; set; } = string.Empty;
 
-        public string ISBN { get; set; } = string.Empty;
-
-        public int AnioPublicacion { get; set; }
-
         public string Categoria { get; set; } = string.Empty;
-
     }
-
 }

@@ -4,12 +4,12 @@ using System.Text;
 
 namespace SIGEBI.Application.Dtos.Prestamo
 {
-    public class CreatePrestamoDto
+    public class UpdatePrestamoDto
     {
-        public int IdUsuario { get; set; }
-
-        public int IdLibro { get; set; }
+        public int IdPrestamo { get; set; }
 
         public DateTime FechaDevolucion { get; set; }
+
+        public string Estado { get; set; } = string.Empty;
     }
 }

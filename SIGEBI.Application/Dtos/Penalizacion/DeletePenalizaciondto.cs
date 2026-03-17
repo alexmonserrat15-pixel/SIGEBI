@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SIGEBI.Application.Dtos.Penalizacion
 {
-    public class DeleteUsuariodto : Penalizaciondto
+    public class DeletePenalizaciondto : Penalizaciondto
     {
     }
 }

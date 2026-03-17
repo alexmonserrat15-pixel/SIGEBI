@@ -6,10 +6,11 @@ namespace SIGEBI.Application.Dtos.Prestamo
 {
     public class Prestamodto
     {
-        public int IdUsuario { get; set; }
-
-        public int IdLibro { get; set; }
-
-        public DateTime FechaDevolucionEsperada { get; set; }
+        public int IdPrestamo { get; set; }
+        public int IdRecurso { get; set; }
+        public DateTime FechaPrestamo { get; set; }
+        public DateTime FechaVencimiento { get; set; }
+        public DateTime? FechaDevolucion { get; set; }
+        public string Estado { get; set; }
     }
 }

@@ -4,8 +4,10 @@ using System.Text;
 
 namespace SIGEBI.Application.Dtos.Penalizacion
 {
-    public class UpdateUsuariodto : Penalizaciondto
+    public class UpdatePenalizacionDto
     {
+        public int IdPenalizacion { get; set; }
 
+        public bool Pagada { get; set; }
     }
 }
