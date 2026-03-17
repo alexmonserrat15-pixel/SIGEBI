@@ -6,7 +6,7 @@ using System.Text;
 
 namespace SIGEBI.Application.Interfaces
 {
-    public interface IUsuarioService
+    public interface IUsuarioService 
     {
         Task<IEnumerable<UsuarioDto>> GetAllUsuarios();
 
