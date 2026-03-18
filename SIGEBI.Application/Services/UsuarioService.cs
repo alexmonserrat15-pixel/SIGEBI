@@ -18,11 +18,11 @@ namespace SIGEBI.Application.Services
             _usuarioRepository = usuarioRepository;
         }
 
-        public async Task<IEnumerable<UsuarioDto>> GetAllUsuarios()
+        public async Task<IEnumerable<Usuariodto>> GetAllUsuarios()
         {
             var usuarios = await _usuarioRepository.GetAllAsync();
 
-            return usuarios.Select(u => new UsuarioDto
+            return usuarios.Select(u => new Usuariodto
             {
                 IdUsuario = u.IdUsuario,
                 Nombre = u.Nombre,
@@ -32,14 +32,14 @@ namespace SIGEBI.Application.Services
             });
         }
 
-        public async Task<UsuarioDto?> GetUsuarioById(int id)
+        public async Task<Usuariodto?> GetUsuarioById(int id)
         {
             var usuario = await _usuarioRepository.GetByIdAsync(id);
 
             if (usuario == null)
                 return null;
 
-            return new UsuarioDto
+            return new Usuariodto
             {
                 IdUsuario = usuario.IdUsuario,
                 Nombre = usuario.Nombre,
@@ -49,7 +49,7 @@ namespace SIGEBI.Application.Services
             };
         }
 
-        public async Task CrearUsuario(CreateUsuarioDto dto)
+        public async Task CrearUsuario(CreateUsuariodto dto)
         {
             var usuario = new Usuario
             {

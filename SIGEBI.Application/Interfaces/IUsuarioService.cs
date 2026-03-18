@@ -8,11 +8,11 @@ namespace SIGEBI.Application.Interfaces
 {
     public interface IUsuarioService 
     {
-        Task<IEnumerable<UsuarioDto>> GetAllUsuarios();
+        Task<IEnumerable<Usuariodto>> GetAllUsuarios();
 
-        Task<UsuarioDto?> GetUsuarioById(int id);
+        Task<Usuariodto?> GetUsuarioById(int id);
 
-        Task CrearUsuario(CreateUsuarioDto dto);
+        Task CrearUsuario(CreateUsuariodto dto);
 
         Task ActualizarUsuario(UpdateUsuarioDto dto);
 
