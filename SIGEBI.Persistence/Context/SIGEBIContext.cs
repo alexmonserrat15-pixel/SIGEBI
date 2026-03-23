@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SIGEBI.Domain.Entities.SIGEBI;
-using SIGEBI.Domain.Base
+using SIGEBI.Domain.Base;
 
 namespace SIGEBI.Infrastructure.Persistence
 {

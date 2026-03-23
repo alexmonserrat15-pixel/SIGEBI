@@ -73,14 +73,5 @@ namespace SIGEBI.Infrastructure.Persistence.Repositories
             throw new NotImplementedException();
         }
 
-        public Task AddAsync(Penalizaciones penalizacion)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task UpdateAsync(Penalizaciones penalizacion)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
