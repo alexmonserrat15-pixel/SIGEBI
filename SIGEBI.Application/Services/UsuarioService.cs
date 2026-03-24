@@ -27,8 +27,8 @@ namespace SIGEBI.Application.Services
                 IdUsuario = u.IdUsuario,
                 Nombre = u.Nombre,
                 Email = u.Email,
-                Rol = u.Rol,
-                Activo = u.Activo
+                IdRol = u.IdRol,
+                Estado = u.Estado
             });
         }
 
@@ -44,8 +44,8 @@ namespace SIGEBI.Application.Services
                 IdUsuario = usuario.IdUsuario,
                 Nombre = usuario.Nombre,
                 Email = usuario.Email,
-                Rol = usuario.Rol,
-                Activo = usuario.Activo
+                IdRol = usuario.IdRol,
+                Estado = usuario.Estado
             };
         }
 
@@ -72,8 +72,8 @@ namespace SIGEBI.Application.Services
 
             usuario.Nombre = dto.Nombre;
             usuario.Email = dto.Email;
-            usuario.Rol = dto.Rol;
-            usuario.Activo = dto.Activo;
+            usuario.IdRol = dto.IdRol;
+            usuario.Estado = dto.Estado;
 
             await _usuarioRepository.UpdateAsync(usuario);
         }
