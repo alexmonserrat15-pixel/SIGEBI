@@ -24,8 +24,7 @@ namespace SIGEBI.Application.Services
             return data.Select(p => new Prestamodto
             {
                 IdPrestamo = p.IdPrestamo,
-                IdUsuario = p.IdUsuario,
-                IdLibro = p.IdLibro,
+                IdRecurso = p.IdRecurso,
                 FechaPrestamo = p.FechaPrestamo,
                 FechaDevolucion = p.FechaDevolucion,
                 Estado = p.Estado
@@ -40,8 +39,7 @@ namespace SIGEBI.Application.Services
             return new Prestamodto
             {
                 IdPrestamo = p.IdPrestamo,
-                IdUsuario = p.IdUsuario,
-                IdLibro = p.IdLibro,
+                IdRecurso = p.IdRecurso,
                 FechaPrestamo = p.FechaPrestamo,
                 FechaDevolucion = p.FechaDevolucion,
                 Estado = p.Estado
@@ -55,7 +53,7 @@ namespace SIGEBI.Application.Services
                 IdUsuario = dto.IdUsuario,
                 IdLibro = dto.IdLibro,
                 FechaPrestamo = DateTime.Now,
-                FechaDevolucion = dto.FechaDevolucionEsperada,
+                FechaDevolucion = dto.FechaDevolucion,
                 Estado = "Activo"
             };
 
@@ -69,7 +67,7 @@ namespace SIGEBI.Application.Services
             if (prestamo == null)
                 throw new Exception("Prestamo no existe");
 
-            prestamo.FechaDevolucion = dto.FechaDevolucionReal;
+            prestamo.FechaDevolucion = dto.FechaDevolucion;
             prestamo.Estado = dto.Estado;
 
             await _repo.UpdateAsync(prestamo);

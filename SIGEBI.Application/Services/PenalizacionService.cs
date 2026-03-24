@@ -30,7 +30,6 @@ namespace SIGEBI.Application.Services
                 IdUsuario = p.IdUsuario,
                 Motivo = p.Motivo,
                 Monto = p.Monto,
-                Pagada = p.Pagada
             });
         }
 
@@ -45,7 +44,6 @@ namespace SIGEBI.Application.Services
                 IdUsuario = p.IdUsuario,
                 Motivo = p.Motivo,
                 Monto = p.Monto,
-                Pagada = p.Pagada
             };
         }
 

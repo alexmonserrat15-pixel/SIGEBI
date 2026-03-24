@@ -12,8 +12,8 @@ namespace SIGEBI.Application.Dtos.Usuario
 
         public string Email { get; set; } = string.Empty;
 
-        public string IdRol { get; set; } = string.Empty;
+        public int IdRol { get; set; } 
 
-        public bool Estado { get; set; }
+        public string Estado { get; set; } = string.Empty;
     }
 }

@@ -23,10 +23,10 @@ namespace SIGEBI.Application.Services
 
             return data.Select(l => new GestionLibroDto
             {
-                IdLibro = l.IdLibro,
+                IdRecurso = l.IdRecurso,
                 Titulo = l.Titulo,
                 Autor = l.Autor,
-                Categoria = l.Categoria,
+                IdCategoria = l.IdCategoria,
                 Estado = l.Estado
             });
         }
@@ -38,10 +38,10 @@ namespace SIGEBI.Application.Services
 
             return new GestionLibroDto
             {
-                IdLibro = l.IdLibro,
+                IdRecurso = l.IdRecurso,
                 Titulo = l.Titulo,
                 Autor = l.Autor,
-                Categoria = l.Categoria,
+                IdCategoria = l.IdCategoria,
                 Estado = l.Estado
             };
         }
@@ -53,7 +53,7 @@ namespace SIGEBI.Application.Services
                 Titulo = dto.Titulo,
                 Autor = dto.Autor,
                 ISBN = dto.ISBN,
-                Categoria = dto.Categoria,
+                IdCategoria = dto.IdCategoria,
                 AnioPublicacion = dto.AnioPublicacion,
                 Estado = "Disponible"
             };
@@ -63,14 +63,14 @@ namespace SIGEBI.Application.Services
 
         public async Task Actualizar(UpdateGestionLibroDto dto)
         {
-            var libro = await _repo.GetByIdAsync(dto.IdLibro);
+            var libro = await _repo.GetByIdAsync(dto.IdCategoria);
 
             if (libro == null)
                 throw new Exception("Libro no existe");
 
             libro.Titulo = dto.Titulo;
             libro.Autor = dto.Autor;
-            libro.Categoria = dto.Categoria;
+            libro.IdCategoria = dto.IdCategoria;
 
             await _repo.UpdateAsync(libro);
         }

@@ -6,7 +6,7 @@ namespace SIGEBI.Application.Dtos.GestionLibros
 {
     public class UpdateGestionLibroDto
     {
-        public int IdLibro { get; set; }
+        public int IdCategoria { get; set; }
 
         public string Titulo { get; set; } = string.Empty;
 
