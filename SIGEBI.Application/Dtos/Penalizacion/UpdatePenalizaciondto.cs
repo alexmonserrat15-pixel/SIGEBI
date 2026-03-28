@@ -8,6 +8,6 @@ namespace SIGEBI.Application.Dtos.Penalizacion
     {
         public int IdPenalizacion { get; set; }
 
-        public bool Pagada { get; set; }
+        public string Estado { get; set; }
     }
 }

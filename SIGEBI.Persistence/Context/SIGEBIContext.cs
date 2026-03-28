@@ -18,6 +18,5 @@ namespace SIGEBI.Infrastructure.Persistence
         public DbSet<Prestamos> Prestamos { get; set; }
 
         public DbSet<Penalizaciones> Penalizaciones { get; set; }
-
     }
 }

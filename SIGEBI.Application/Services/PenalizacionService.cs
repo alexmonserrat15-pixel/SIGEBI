@@ -49,13 +49,11 @@ namespace SIGEBI.Application.Services
 
         public async Task Crear(CreatePenalizacionDto dto)
         {
-            var penalizacion = new Penalizacion
+            var penalizacion = new Penalizaciones
             {
                 IdUsuario = dto.IdUsuario,
                 Motivo = dto.Motivo,
-                Monto = dto.Monto,
-                Pagada = false,
-                FechaPenalizacion = DateTime.Now
+                Monto = dto.Monto
             };
 
             await _repo.AddAsync(penalizacion);
@@ -68,7 +66,7 @@ namespace SIGEBI.Application.Services
             if (p == null)
                 throw new Exception("Penalizacion no existe");
 
-            p.Pagada = dto.Pagada;
+            p.Estado = dto.Estado;
 
             await _repo.UpdateAsync(p);
         }

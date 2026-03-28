@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 using SIGEBI.Domain.Entities;
 
+
 namespace SIGEBI.Application.Services
 {
     public class UsuarioService : IUsuarioService
@@ -52,13 +53,13 @@ namespace SIGEBI.Application.Services
 
         public async Task CrearUsuario(CreateUsuariodto dto)
         {
-            var usuario = new Usuario
+            var usuario = new Usuarios
             {
                 Nombre = dto.Nombre,
                 Email = dto.Email,
-                PasswordHash = dto.Password, 
-                Rol = dto.Rol,
-                Activo = true
+                Password = dto.Password, 
+                IdRol = dto.IdRol,
+                Estado = dto.Estado
             };
 
             await _usuarioRepository.AddAsync(usuario);

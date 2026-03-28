@@ -8,7 +8,7 @@ namespace SIGEBI.Application.Dtos.Prestamo
     {
         public int IdUsuario { get; set; }
 
-        public int IdLibro { get; set; }
+        public int IdRecurso { get; set; }
 
         public DateTime FechaDevolucion { get; set; }
     }

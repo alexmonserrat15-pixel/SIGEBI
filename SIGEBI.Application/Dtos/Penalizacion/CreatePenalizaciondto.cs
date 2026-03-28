@@ -12,7 +12,7 @@ namespace SIGEBI.Application.Dtos.Penalizacion
 
             public string Motivo { get; set; } = string.Empty;
 
-            public decimal Monto { get; set; }
+            public int Monto { get; set; }
         }
     }
 }

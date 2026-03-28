@@ -1,7 +1,7 @@
 ﻿
 namespace SIGEBI.Domain.Base
 {
-    public abstract class Usuarios
+    public class Usuarios
     {
         public int IdUsuario { get; set; }
         public string Nombre { get; set; }

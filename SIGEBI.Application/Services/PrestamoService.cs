@@ -48,10 +48,10 @@ namespace SIGEBI.Application.Services
 
         public async Task Crear(CreatePrestamoDto dto)
         {
-            var prestamo = new Prestamo
+            var prestamo = new Prestamos
             {
                 IdUsuario = dto.IdUsuario,
-                IdLibro = dto.IdLibro,
+                IdRecurso = dto.IdRecurso,
                 FechaPrestamo = DateTime.Now,
                 FechaDevolucion = dto.FechaDevolucion,
                 Estado = "Activo"

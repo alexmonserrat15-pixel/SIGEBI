@@ -1,9 +1,10 @@
 ﻿
 using SIGEBI.Domain.Entities.SIGEBI;
+using SIGEBI.Domain.Repository.SIGEBI.Base;
 
 namespace SIGEBI.Domain.Repository.SIGEBI
 {
-    public interface IPenalizacionesRepository
+    public interface IPenalizacionesRepository : IBaseRepository<Penalizaciones>
     {
         Task<IEnumerable<Penalizaciones>> GetAllAsync();
 
