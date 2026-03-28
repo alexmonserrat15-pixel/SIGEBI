@@ -21,7 +21,7 @@ namespace SIGEBI.Infrastructure.Persistence.Repositories
         public async Task<IEnumerable<Prestamos>> GetAllAsync()
         {
             return await _context.Prestamos
-                .Include(p => p.IdUsuario)
+                .Include(p => p.Usuario)
                 .Include(p => p.IdRecurso)
                 .ToListAsync();
         }
@@ -29,7 +29,7 @@ namespace SIGEBI.Infrastructure.Persistence.Repositories
         public async Task<Prestamos?> GetByIdAsync(int id)
         {
             return await _context.Prestamos
-                .Include(p => p.IdUsuario)
+                .Include(p => p.Usuario)
                 .Include(p => p.IdRecurso)
                 .FirstOrDefaultAsync(p => p.IdPrestamo == id);
         }
