@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SIGEBI.Domain.Entities.SIGEBI
 {
-    public sealed class Prestamos : Usuarios
+    public sealed class Prestamos 
     {
         [Key]
         public int IdPrestamo { get; set; }
