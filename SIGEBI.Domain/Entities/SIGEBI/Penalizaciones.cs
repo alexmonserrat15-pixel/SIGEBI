@@ -1,9 +1,11 @@
 ﻿using SIGEBI.Domain.Base;
+using System.ComponentModel.DataAnnotations;
 
 namespace SIGEBI.Domain.Entities.SIGEBI
 {
     public sealed class Penalizaciones : Usuarios
     {
+        [Key]
         public int IdPenalizacion { get; set; }
         public int IdUsuario { get; set; }
         public int IdPrestamo { get; set; }

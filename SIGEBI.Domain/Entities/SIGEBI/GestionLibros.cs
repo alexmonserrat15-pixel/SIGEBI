@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace SIGEBI.Domain.Entities.SIGEBI
 {
     public sealed class GestionLibros
     {
+        [Key]
         public int IdRecurso { get; set; }
         public string Titulo { get; set; }
         public string Autor { get; set; }
