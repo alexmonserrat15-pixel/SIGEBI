@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SIGEBI.Domain.Entities.SIGEBI
 {
+    [Table("Prestamos", Schema = "SIGEBI")]
     public sealed class Prestamos 
     {
         [Key]

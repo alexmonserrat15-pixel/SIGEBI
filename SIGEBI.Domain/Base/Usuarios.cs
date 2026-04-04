@@ -1,8 +1,10 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SIGEBI.Domain.Base
 {
+    [Table("Usuarios", Schema = "SIGEBI")]
     public class Usuarios
     {
         [Key]

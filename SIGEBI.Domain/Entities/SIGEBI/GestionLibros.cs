@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace SIGEBI.Domain.Entities.SIGEBI
 {
+    [Table("GestionLibros", Schema = "SIGEBI")]
     public sealed class GestionLibros
     {
         [Key]

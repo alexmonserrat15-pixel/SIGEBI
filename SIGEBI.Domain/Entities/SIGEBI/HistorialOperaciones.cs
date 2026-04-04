@@ -1,8 +1,10 @@
 ﻿using SIGEBI.Domain.Base;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SIGEBI.Domain.Entities.SIGEBI
 {
+    [Table("HistorialOperaciones", Schema = "SIGEBI")]
     public sealed class HistorialOperaciones : Usuarios
     {
         [Key]
