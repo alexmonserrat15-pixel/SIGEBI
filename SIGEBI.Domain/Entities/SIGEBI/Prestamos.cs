@@ -9,6 +9,7 @@ namespace SIGEBI.Domain.Entities.SIGEBI
         [Key]
         public int IdPrestamo { get; set; }
         public int IdRecurso { get; set; }
+        public int IdUsuario { get; set; }
         public DateTime FechaPrestamo { get; set; }
         public DateTime FechaVencimiento { get; set; }
         public DateTime? FechaDevolucion { get; set; }
