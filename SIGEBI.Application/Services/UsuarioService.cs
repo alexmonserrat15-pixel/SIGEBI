@@ -56,8 +56,9 @@ namespace SIGEBI.Application.Services
             var usuario = new Usuarios
             {
                 Nombre = dto.Nombre,
+                Apellido = dto.Apellido, 
                 Email = dto.Email,
-                Password = dto.Password, 
+                Password = dto.Password,
                 IdRol = dto.IdRol,
                 Estado = dto.Estado
             };
