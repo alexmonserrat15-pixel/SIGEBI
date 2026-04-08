@@ -53,10 +53,14 @@ namespace SIGEBI.Application.Services
                 Titulo = dto.Titulo,
                 Autor = dto.Autor,
                 ISBN = dto.ISBN,
-                IdCategoria = dto.IdCategoria,
+                Editorial = dto.Editorial,
                 AnioPublicacion = dto.AnioPublicacion,
+                IdCategoria = dto.IdCategoria,
+                CantidadTotal = dto.CantidadTotal,
+                CantidadDisponible = dto.CantidadTotal, 
                 Estado = "Disponible"
             };
+
 
             await _repo.AddAsync(libro);
         }

@@ -1,0 +1,33 @@
+﻿@using SIGEBI.Application.Dtos
+@model CreateUsuariodto
+
+<h2>Crear Usuario</h2>
+
+<form method="post">
+    <div>
+        <label>Nombre</label>
+        <input asp-for="Nombre" />
+    </div>
+
+    <div>
+        <label>Apellido</label>
+        <input asp-for="Apellido" />
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input asp-for="Email" />
+    </div>
+
+    <div>
+        <label>Password</label>
+        <input asp-for="Password" type="password" />
+    </div>
+
+    <div>
+        <label>Rol</label>
+        <input asp-for="IdRol" />
+    </div>
+
+    <button type="submit">Guardar</button>
+</form>

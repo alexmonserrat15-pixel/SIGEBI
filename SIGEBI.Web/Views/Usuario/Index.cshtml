@@ -1,0 +1,22 @@
+﻿@model List<UsuarioDto>
+
+<h2>Usuarios</h2>
+
+<a href="/Usuario/Create">Crear Usuario</a>
+
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Rol</th>
+    </tr>
+
+    @foreach (var u in Model)
+    {
+        <tr>
+            <td>@u.Nombre</td>
+            <td>@u.Email</td>
+            <td>@u.IdRol</td>
+        </tr>
+    }
+</table>
