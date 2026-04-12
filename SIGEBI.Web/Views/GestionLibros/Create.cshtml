@@ -1,0 +1,13 @@
+﻿@model CreateLibroDto
+
+<form method="post">
+    <input asp-for="Titulo" placeholder="Título" />
+    <input asp-for="Autor" placeholder="Autor" />
+    <input asp-for="ISBN" placeholder="ISBN" />
+    <input asp-for="Editorial" placeholder="Editorial" />
+    <input asp-for="AnioPublicacion" />
+    <input asp-for="IdCategoria" />
+    <input asp-for="CantidadTotal" />
+
+    <button type="submit">Guardar</button>
+</form>

@@ -2,12 +2,26 @@
 using System.Text;
 using System.Text.Json;
 
-public async Task<bool> CrearLibro(CreateLibroDto dto)
+namespace SIGEBI.Web.Services
 {
-    var json = JsonSerializer.Serialize(dto);
-    var content = new StringContent(json, Encoding.UTF8, "application/json");
+    public class GestionLibrosService
+    {
 
-    var response = await _httpClient.PostAsync("api/GestionLibro", content);
+        private readonly HttpClient _httpClient;
 
-    return response.IsSuccessStatusCode;
+        // 🔥 Inyección correcta
+        public GestionLibrosService(IHttpClientFactory factory)
+        {
+            _httpClient = factory.CreateClient("SIGEBI_API");
+        }
+        public async Task<bool> CrearLibro(CreateLibroDto dto)
+        {
+            var json = JsonSerializer.Serialize(dto);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var response = await _httpClient.PostAsync("api/GestionLibro", content);
+
+            return response.IsSuccessStatusCode;
+        }
+    }
 }
